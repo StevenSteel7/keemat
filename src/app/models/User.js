@@ -11,10 +11,10 @@ const userSchema = new Schema(
         },
         password:{
             type: String,
-            required: true,
+            required: false,
         },
         },
         {timestamps:true}
 );
 
-export default mongoose.model.User || mongoose.model("User", userSchema); // if not created, create a new user
+export default mongoose.models.User || mongoose.model("User", userSchema); // if not created, create a new user

@@ -17,7 +17,7 @@ export const POST = async( request:any )=>{
             return new NextResponse("Email is already in use",{status: 400})
         }
 
-        const hashedPassword = await bcrypt.hash(password, 12);
+        const hashedPassword = await bcrypt.hash(password, 5);
         const newUser = new User({
             email, 
             password:hashedPassword
@@ -35,8 +35,4 @@ export const POST = async( request:any )=>{
         });
         }
     }
-
-
-
-
-
+    
